@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import LegalPage from "./LegalPage";
+
 const services = [
   { number: "01", title: "Vehicle Transport", copy: "Safe and reliable car transportation across cities. We handle your vehicle with utmost care.", image: "/images/vehicle-bg.jpg", tone: "amber" },
   { number: "02", title: "Motorcycle & Bicycle", copy: "Quick delivery for two-wheelers. From scooters to bicycles, we move them all.", image: "/images/motorcycle-bg.jpg", tone: "blue" },
@@ -47,7 +49,7 @@ function Mark({ compact = false }: { compact?: boolean }) {
   return <img className={`brand-logo${compact ? " compact-logo" : ""}`} src="/images/transpo24-logo.png" alt="Transpo24" />;
 }
 
-export default function Home() {
+function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -165,10 +167,24 @@ export default function Home() {
           <div className="footer-brand"><a className="brand" href="#home"><Mark /></a><p>Your trusted partner for all transport needs. Fast, reliable, and available 24/7.</p></div>
           <div><h4>Services</h4><a href="#services">Vehicle Transport</a><a href="#services">Motorcycle Delivery</a><a href="#services">Goods Shipping</a><a href="#services">Home Moving</a></div>
           <div><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Press</a></div>
-          <div><h4>Contact</h4><a href="tel:+41791234567">+41 79 123 4567</a><a href="mailto:info@transpo24.ch">info@transpo24.ch</a><span>Basel, Switzerland</span></div>
+          <div><h4>Contact</h4><a href="mailto:support@transpo24.com">support@transpo24.com</a><a href="mailto:info@transpo24.com">info@transpo24.com</a><span>Basel, Switzerland</span></div>
         </div>
-        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#">Cookies</a></div></div>
       </div></footer>
     </main>
   );
+}
+
+export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (path === "/privacy" || path === "/privacy-policy") {
+    return <LegalPage document="privacy" />;
+  }
+
+  if (path === "/terms" || path === "/terms-of-service") {
+    return <LegalPage document="terms" />;
+  }
+
+  return <Home />;
 }
