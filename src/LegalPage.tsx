@@ -46,6 +46,7 @@ export default function LegalPage({ document }: LegalPageProps) {
         <nav aria-label="Legal navigation">
           <a className={isPrivacy ? "active" : ""} href="/privacy">Privacy</a>
           <a className={!isPrivacy ? "active" : ""} href="/terms">Terms</a>
+          <a href="/account-deletion">Delete</a>
         </nav>
       </header>
 

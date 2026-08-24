@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import LegalPage from "./LegalPage";
+import AccountDeletionPage from "./AccountDeletionPage";
 
 const services = [
   { number: "01", title: "Vehicle Transport", copy: "Safe and reliable car transportation across cities. We handle your vehicle with utmost care.", image: "/images/vehicle-bg.jpg", tone: "amber" },
@@ -169,7 +170,7 @@ function Home() {
           <div><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Press</a></div>
           <div><h4>Contact</h4><a href="mailto:support@transpo24.com">support@transpo24.com</a><a href="mailto:info@transpo24.com">info@transpo24.com</a><span>Basel, Switzerland</span></div>
         </div>
-        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#">Cookies</a></div></div>
+        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/account-deletion">Delete account</a><a href="#">Cookies</a></div></div>
       </div></footer>
     </main>
   );
@@ -184,6 +185,10 @@ export default function App() {
 
   if (path === "/terms" || path === "/terms-of-service") {
     return <LegalPage document="terms" />;
+  }
+
+  if (path === "/account-deletion" || path === "/delete-account") {
+    return <AccountDeletionPage />;
   }
 
   return <Home />;

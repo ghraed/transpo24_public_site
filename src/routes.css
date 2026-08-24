@@ -148,6 +148,10 @@ footer { padding-top: 70px; }
 .legal-footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px max(24px, calc((100vw - 1120px) / 2)); color: #aaa89f; background: var(--ink); font-size: .78rem; }
 .legal-footer > div { display: flex; gap: 22px; }
 .legal-footer a:hover { color: var(--yellow); }
+.deletion-document > h1 { max-width: 900px; }
+.deletion-copy a:not(.deletion-button) { color: #765f00; text-decoration: underline; }
+.deletion-button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; margin: 26px 0; padding: 0 22px; border-radius: 999px; color: var(--ink); background: var(--yellow); font-weight: 900; }
+.deletion-button:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(168, 140, 13, .2); }
 
 @media (max-width: 700px) {
   .legal-header { padding: 12px 15px; }
