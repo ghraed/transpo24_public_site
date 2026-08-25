@@ -34,7 +34,7 @@ function renderLegalContent(content: string): ReactNode[] {
 
 export default function LegalPage({ document }: LegalPageProps) {
   const isPrivacy = document === "privacy";
-  const title = isPrivacy ? "Privacy Policy" : "Terms of Service";
+  const title = isPrivacy ? "Privacy Policy" : "Terms & Conditions";
   const content = isPrivacy ? PRIVACY_POLICY : TERMS_OF_SERVICE;
 
   return (
