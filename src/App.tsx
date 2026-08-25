@@ -168,7 +168,7 @@ function Home() {
           <div className="footer-brand"><a className="brand" href="#home"><Mark /></a><p>Your trusted partner for all transport needs. Fast, reliable, and available 24/7.</p></div>
           <div><h4>Services</h4><a href="#services">Vehicle Transport</a><a href="#services">Motorcycle Delivery</a><a href="#services">Goods Shipping</a><a href="#services">Home Moving</a></div>
           <div><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Press</a></div>
-          <div><h4>Contact</h4><a href="mailto:support@transpo24.com">support@transpo24.com</a><a href="mailto:info@transpo24.com">info@transpo24.com</a><span>Basel, Switzerland</span></div>
+          <div><h4>Contact</h4><a href="mailto:privacy@transpo24.ch">privacy@transpo24.ch</a><a href="mailto:info@transpo24.ch">info@transpo24.ch</a><span>Basel, Switzerland</span></div>
         </div>
         <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/account-deletion">Delete account</a><a href="#">Cookies</a></div></div>
       </div></footer>
