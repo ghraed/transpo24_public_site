@@ -59,8 +59,8 @@ export default function LegalPage({ document }: LegalPageProps) {
       <footer className="legal-footer">
         <span>© 2026 Transpo24. All rights reserved.</span>
         <div>
-          <a href="mailto:support@transpo24.com">support@transpo24.com</a>
-          <a href="mailto:info@transpo24.com">info@transpo24.com</a>
+          <a href="mailto:privacy@transpo24.ch">privacy@transpo24.ch</a>
+          <a href="mailto:info@transpo24.ch">info@transpo24.ch</a>
         </div>
       </footer>
     </main>
