@@ -1,6 +1,6 @@
 export default function AccountDeletionPage() {
   const deletionEmail =
-    "mailto:info@transpo24.com?subject=Transpo24%20account%20deletion%20request&body=Phone%20number%20used%20for%20the%20account%3A%20%0AAccount%20type%20(customer%20or%20driver)%3A%20";
+    "mailto:info@transpo24.ch?subject=Transpo24%20account%20deletion%20request&body=Phone%20number%20used%20to%20sign%20in%3A%20%0AAccount%20type%20(customer%20or%20driver)%3A%20";
 
   return (
     <main className="legal-page">
@@ -21,14 +21,14 @@ export default function AccountDeletionPage() {
         <div className="legal-copy deletion-copy">
           <h2>Request deletion without reinstalling the app</h2>
           <p>
-            To delete a Transpo24 customer or driver account, email our privacy team from the
-            address associated with your account. Include the phone number used to sign in and
-            whether the account is a customer or driver account.
+            To delete a Transpo24 customer or driver account, email our support team from any email
+            address you can access. Include the phone number used to sign in and whether the account
+            is a customer or driver account.
           </p>
           <a className="deletion-button" href={deletionEmail}>Email an account deletion request</a>
           <p>
-            If you still have the app, you can also use Profile → Account → Delete account. We may
-            ask for limited information to verify that the request belongs to you before acting on it.
+            If you still have the app, you can also use Profile → Delete account. We may ask for
+            limited information to verify that the request belongs to you before acting on it.
           </p>
 
           <h2>What happens to your data</h2>
@@ -41,7 +41,7 @@ export default function AccountDeletionPage() {
           <p>
             We aim to acknowledge requests promptly and complete verified requests within 30 days,
             unless applicable law permits or requires more time. Questions can be sent to
-            {" "}<a href="mailto:info@transpo24.com">info@transpo24.com</a>.
+            {" "}<a href="mailto:info@transpo24.ch">info@transpo24.ch</a>.
           </p>
         </div>
       </article>
@@ -50,7 +50,7 @@ export default function AccountDeletionPage() {
         <span>© 2026 Transpo24. All rights reserved.</span>
         <div>
           <a href="/privacy">Privacy policy</a>
-          <a href="mailto:info@transpo24.com">info@transpo24.com</a>
+          <a href="mailto:info@transpo24.ch">info@transpo24.ch</a>
         </div>
       </footer>
     </main>
