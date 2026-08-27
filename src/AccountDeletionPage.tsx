@@ -30,6 +30,11 @@ export default function AccountDeletionPage() {
             If you still have the app, you can also use Profile → Delete account. We may ask for
             limited information to verify that the request belongs to you before acting on it.
           </p>
+          <p>
+            You may submit a deletion request at any time. If the account has an active transport
+            request, that transport request must first be completed or cancelled before account
+            deletion can be completed.
+          </p>
 
           <h2>What happens to your data</h2>
           <div className="legal-bullet"><span>•</span><p>Profile, authentication, device-token and active-session data is deleted or irreversibly de-identified after verification.</p></div>
