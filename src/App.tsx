@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import LegalPage from "./LegalPage";
 import AccountDeletionPage from "./AccountDeletionPage";
+import NotFoundPage from "./NotFoundPage";
+import { isKnownRoute, normalizePath } from "./seo";
 
 const services = [
   { number: "01", title: "Vehicle Transport", copy: "Safe and reliable car transportation across cities. We handle your vehicle with utmost care.", image: "/images/vehicle-bg.jpg", tone: "amber" },
@@ -177,7 +179,11 @@ function Home() {
 }
 
 export default function App() {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const path = normalizePath(window.location.pathname);
+
+  if (!isKnownRoute(path)) {
+    return <NotFoundPage />;
+  }
 
   if (path === "/privacy" || path === "/privacy-policy") {
     return <LegalPage document="privacy" />;

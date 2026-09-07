@@ -22,6 +22,19 @@ Upload the contents of the generated `dist/` folder to the web root for
 `transpo24.com`. The project is static: it needs Nginx or another web server,
 but no Node.js process in production.
 
+The production server must permanently redirect `http` and `www` requests to
+`https://transpo24.com`. It should also return a real `404` status for unknown
+paths instead of rewriting every request to `index.html`. The SPA entry-point
+fallback is needed only for these routes and their legacy aliases:
+
+- `/privacy` and `/privacy-policy`
+- `/terms` and `/terms-of-service`
+- `/account-deletion` and `/delete-account`
+
+The client adds route-specific canonical and robots metadata as a second layer
+of protection, but HTTP redirects and status codes remain the preferred signal
+for search engines.
+
 ## Legal pages
 
 - Privacy Policy: `https://transpo24.com/privacy`

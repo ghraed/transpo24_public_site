@@ -4,6 +4,9 @@ import App from "./App";
 import "./globals.css";
 import "./lower.css";
 import "./routes.css";
+import { applyRouteSeo } from "./seo";
+
+applyRouteSeo(window.location.pathname);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
