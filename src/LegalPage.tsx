@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 
 import { PRIVACY_POLICY, TERMS_OF_SERVICE } from "./legalContent";
+import { COOKIES_NOTICE } from "./cookiesContent";
 
 type LegalPageProps = {
-  document: "privacy" | "terms";
+  document: "privacy" | "terms" | "cookies";
 };
 
 function formatInline(text: string): ReactNode[] {
@@ -34,8 +35,9 @@ function renderLegalContent(content: string): ReactNode[] {
 
 export default function LegalPage({ document }: LegalPageProps) {
   const isPrivacy = document === "privacy";
-  const title = isPrivacy ? "Privacy Policy" : "Terms & Conditions";
-  const content = isPrivacy ? PRIVACY_POLICY : TERMS_OF_SERVICE;
+  const isCookies = document === "cookies";
+  const title = isCookies ? "Cookies & tracking" : isPrivacy ? "Privacy Policy" : "Terms & Conditions";
+  const content = isCookies ? COOKIES_NOTICE : isPrivacy ? PRIVACY_POLICY : TERMS_OF_SERVICE;
 
   return (
     <main className="legal-page">
@@ -45,7 +47,8 @@ export default function LegalPage({ document }: LegalPageProps) {
         </a>
         <nav aria-label="Legal navigation">
           <a className={isPrivacy ? "active" : ""} href="/privacy">Privacy</a>
-          <a className={!isPrivacy ? "active" : ""} href="/terms">Terms</a>
+          <a className={document === "terms" ? "active" : ""} href="/terms">Terms</a>
+          <a className={isCookies ? "active" : ""} href="/cookies">Cookies</a>
           <a href="/account-deletion">Delete</a>
         </nav>
       </header>

@@ -1,0 +1,11 @@
+{
+  "reviewedOn": "2026-09-09",
+  "scope": "Direct dependencies reviewed for optional analytics and advertising integrations; not certification of providers or transitive SDK behavior.",
+  "reviewedDependencies": [
+    "@vitejs/plugin-react",
+    "react",
+    "react-dom",
+    "typescript",
+    "vite"
+  ]
+}

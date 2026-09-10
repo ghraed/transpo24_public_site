@@ -154,7 +154,7 @@ footer { padding-top: 70px; }
 .deletion-button:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(168, 140, 13, .2); }
 
 @media (max-width: 700px) {
-  .legal-header { padding: 12px 15px; }
+  .legal-header { padding: 12px 15px; flex-wrap: wrap; gap: 12px; }
   .legal-header img { width: 132px; height: 38px; }
   .legal-header nav a { padding: 8px 10px; font-size: .72rem; }
   .legal-document { padding: 60px 0 80px; }

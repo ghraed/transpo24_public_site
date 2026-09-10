@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "privacy:check": "node scripts/check-privacy.mjs",
+    "prebuild": "npm run privacy:check"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

@@ -8,6 +8,12 @@ type SeoConfig = {
 };
 
 const routeSeo: Record<string, SeoConfig> = {
+  "/cookies": {
+    canonicalPath: "/cookies",
+    description: "Understand cookies, app permissions and tracking choices at Transpo24.",
+    index: true,
+    title: "Cookies & Tracking — Transpo24",
+  },
   "/": {
     canonicalPath: "/",
     description: "Fast, safe, and reliable transport for vehicles, motorcycles, goods, and furniture across Switzerland.",

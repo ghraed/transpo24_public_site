@@ -172,7 +172,7 @@ function Home() {
           <div><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Press</a></div>
           <div><h4>Contact</h4><a href="mailto:privacy@transpo24.ch">privacy@transpo24.ch</a><a href="mailto:info@transpo24.ch">info@transpo24.ch</a><span>Basel, Switzerland</span></div>
         </div>
-        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/account-deletion">Delete account</a><a href="#">Cookies</a></div></div>
+        <div className="footer-bottom"><span>© 2026 Transpo24. All rights reserved.</span><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/account-deletion">Delete account</a><a href="/cookies">Cookies & tracking</a></div></div>
       </div></footer>
     </main>
   );
@@ -187,6 +187,10 @@ export default function App() {
 
   if (path === "/privacy" || path === "/privacy-policy") {
     return <LegalPage document="privacy" />;
+  }
+
+  if (path === "/cookies") {
+    return <LegalPage document="cookies" />;
   }
 
   if (path === "/terms" || path === "/terms-of-service") {
